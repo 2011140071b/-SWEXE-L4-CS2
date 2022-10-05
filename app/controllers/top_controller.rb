@@ -15,4 +15,9 @@ class TopController < ApplicationController
       render "error"
     end
   end
+  
+  def logout
+    session[:login_uid] = nil
+    render "login"
+  end
 end
